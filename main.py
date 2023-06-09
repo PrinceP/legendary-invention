@@ -11,6 +11,8 @@ from langchain.schema import (
     AIMessage
 )
 
+from streamlit_extras.buy_me_a_coffee import button
+
 import openai
 import base64
 import random
@@ -141,6 +143,8 @@ def main():
     # sidebar with user input
     with st.sidebar:
         user_input = st.text_input("Your message: ", key="user_input")
+
+        button(username="princep", floating=False, width=221)
 
         # handle user input
         if user_input:
